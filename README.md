@@ -30,8 +30,8 @@ Connect the long leg to the D2 pin.
 
 
 ## First run.
-Connect your computer or your mobile phone to the wifi network named Wifi-Ir
-Follow the instuctions to setup wifi.
+- Connect your computer or your mobile phone to the wifi network named "Wifi-Ir".
+- The wifi connection wizard will automatically open.
 
 ## Usage.
 
