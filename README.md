@@ -16,17 +16,17 @@ Connect the short leg to the ground pin.
 Connect the long leg to the D2 pin.
 
 ## Program the code.
-open the arduino IDE.
-Add ESP8266 support ising the boards manager. https://github.com/esp8266/Arduino#installing-with-boards-manager
-Install IRremote. https://github.com/markszabo/IRremoteESP8266#official-releases-via-the-arduino-ide-v18-windows--linux
-Install ProntoHex. https://github.com/probonopd/ProntoHex
-Install WiFi Manager. https://github.com/tzapu/WiFiManager#install-through-library-manager
+- open the arduino IDE.
+- Add ESP8266 support ising the boards manager. https://github.com/esp8266/Arduino#installing-with-boards-manager
+- Install IRremote. https://github.com/markszabo/IRremoteESP8266#official-releases-via-the-arduino-ide-v18-windows--linux
+- Install ProntoHex. https://github.com/probonopd/ProntoHex
+- Install WiFi Manager. https://github.com/tzapu/WiFiManager#install-through-library-manager
 
-Connect the wemos D1 mini with USB to your computer.
-Open the wifi-ir.ino file in Arduino IDE.
-Goto Tools, Select the board "LOLIN (Wemos) D1 R2 & mini".
-Goto Tools, Select the serial port.
-Goto Sketch Upload. the Sketch will now upload to the microcontroller.
+- Connect the wemos D1 mini with USB to your computer.
+- Open the wifi-ir.ino file in Arduino IDE.
+- Goto Tools, Select the board "LOLIN (Wemos) D1 R2 & mini".
+- Goto Tools, Select the serial port.
+- Goto Sketch Upload. the Sketch will now upload to the microcontroller.
 
 
 ## First run.
