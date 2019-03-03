@@ -48,6 +48,7 @@ http://192.168.1.90/pronto?code=0000 006C 0022 0002 015B 00AD 0016 0016 0016 004
 ### Connect using a TCP session
 
 This is the fastest connection method. (low latency)
-Connect using telnet port 23
-Send the prontoHex and end with a return character (\r)
+
+- Connect using telnet port 23
+- Send the prontoHex and end with a return character (\r)
 
