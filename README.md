@@ -4,11 +4,11 @@ This project will set you back somewhere between 2$ and 4$. If you like this pro
 
 ## Requirements:
 - A Wemos D1 Mini (ESP8266) or similar.
-  https://wiki.wemos.cc/products:d1:d1_mini
-  http://tiny.cc/zzvj3y
+  -- https://wiki.wemos.cc/products:d1:d1_mini
+  -- http://tiny.cc/zzvj3y
 - A Wemos IR Controller Shield
-  https://wiki.wemos.cc/products:d1_mini_shields:ir_controller_shield
-  https://tinyurl.com/y6oelkry
+  -- https://wiki.wemos.cc/products:d1_mini_shields:ir_controller_shield
+  -- https://tinyurl.com/y6oelkry
 - Prototype board, Prototype cables. or a soldering station.
 - Arduino IDE installed on your computer. -> https://www.arduino.cc/en/main/software
 
