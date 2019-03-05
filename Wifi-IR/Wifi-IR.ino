@@ -4,15 +4,17 @@
 #include <IRremoteESP8266.h>      //https://github.com/markszabo/IRremoteESP8266
 #include <ProntoHex.h>            //https://github.com/probonopd/ProntoHex
 #include "WiFiManager.h"          //https://github.com/tzapu/WiFiManager
+#include <ESP8266mDNS.h>  
 
 // Configure Ditigal PIN
 // D3 is used with the wemos IR shield: https://wiki.wemos.cc/products:d1_mini_shields:ir_controller_shield
 IRsend irsend(D3);
-char* hostname = "Wifi-IR";
+char hostString[16] = {0};
 
 ProntoHex ph = ProntoHex();       //Prontohex.
 ESP8266WebServer serverHttp(80);  //HTTP service.
 WiFiServer serverTcp(23);         //TCP service.
+
 
 void configModeCallback (WiFiManager *myWiFiManager) {
   Serial.println(F("Entered config mode"));
@@ -20,14 +22,16 @@ void configModeCallback (WiFiManager *myWiFiManager) {
   Serial.println(myWiFiManager->getConfigPortalSSID());
 }
 
-
 void setup() {
   Serial.begin(115200);
   WiFiManager wifiManager;
+  sprintf(hostString, "Wifi-IR_%06X", ESP.getChipId());
+  WiFi.hostname(hostString);
+  
   //wifiManager.resetSettings(); // Remove stored WiFi Settings.
-
+  
   wifiManager.setAPCallback(configModeCallback);
-  if(!wifiManager.autoConnect(hostname)) {
+  if(!wifiManager.autoConnect(hostString)) {
     Serial.println("failed to connect and hit timeout");
     ESP.reset();
     delay(1000);
@@ -46,13 +50,27 @@ void setup() {
   serverHttp.begin();
   Serial.println("Http Server started");
 
-
+  // Start telnet TCP server
   serverTcp.begin();
+
+  // Advertise MDNS
+  if (!MDNS.begin(hostString)) {
+    Serial.println("Error setting up MDNS responder!");
+  }
+  Serial.println("mDNS responder started");
+  MDNS.addService("wifi-ir-telnet", "tcp", 23);
+  MDNS.addService("wifi-ir-http", "tcp", 80);
+  Serial.print("Hostname: ");
+  Serial.println(hostString);
+  Serial.print("mDNS name: ");
+  Serial.print(hostString);
+  Serial.println(".local");
 }
 
 void loop() {
   serverHttp.handleClient();
   handleTcpPronto();
+  MDNS.update();
 }
 
 void handleHttpRoot() {
