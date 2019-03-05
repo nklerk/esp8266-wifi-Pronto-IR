@@ -45,10 +45,15 @@ http://<ipaddress of wifi-ir>/pronto?code=<PRONTO HEX>
 Example:
 http://192.168.1.90/pronto?code=0000 006C 0022 0002 015B 00AD 0016 0016 0016 0041 0016 0016 0016 0016 0016 0041 0016 0016 0016 0041 0016 0041 0016 0041 0016 0016 0016 0041 0016 0041 0016 0016 0016 0041 0016 0041 0016 0016 0016 0041 0016 0016 0016 0041 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0016 0041 0016 0016 0016 0041 0016 0041 0016 0041 0016 0041 0016 0041 0016 05CB 015B 0057 0016 0E6C
 
-### Connect using a TCP session
+### Connect using a TCP session (telnet)
 
 This is the fastest connection method. (low latency)
 
 - Connect using telnet port 23
 - Send the prontoHex and end with a return character (\r)
 
+### Discover using mDNS
+
+The code generates a unique hostname. Wifi-IR_...... where the ...... represent the unique id.
+The http based API can be discovered using _wifi-ir-http._tcp.
+The telnet based API The hcan be discovered using _wifi-ir-telnet._tcp.
