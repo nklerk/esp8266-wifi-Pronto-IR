@@ -1,6 +1,7 @@
 # esp8266-wifi-Pronto-IR
 A arduino project that makes it possible to send IR codes over a WiFi connection.
-This project will set you back somewhere between 2$ and 4$. If you like this project then please donate: https://www.paypal.me/NielsdeKlerk
+This project will set you back somewhere between 2$ and 4$. 
+If you like this project then please consider a donation: https://www.paypal.me/NielsdeKlerk
 
 ## Requirements:
 - A Wemos D1 Mini (ESP8266) or similar.
@@ -33,6 +34,9 @@ Place the IR controller to the D1 Mini.
 ## First run.
 - Connect your computer or your mobile phone to the wifi network named "Wifi-Ir".
 - The wifi connection wizard will automatically open.
+
+## 3D Printed case:
+- I've updated the project with a STL and a Fusion 360 model
 
 ## Usage.
 
