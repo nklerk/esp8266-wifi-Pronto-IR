@@ -1,37 +1,42 @@
 # esp8266-wifi-Pronto-IR
 A arduino project that makes it possible to send IR codes over a WiFi connection.
-This project will set you back somewhere between 2$ and 4$ and it's super easy to build and use.
+This project will set you back somewhere between 2$ and 4$. 
 If you like this project then please consider a donation: https://www.paypal.me/NielsdeKlerk
 
 ## Requirements:
-- A Wemos/lolin D1 Mini.
+- A Wemos D1 Mini (ESP8266) or similar.
   -- https://wiki.wemos.cc/products:d1:d1_mini
   -- http://tiny.cc/zzvj3y
-- A Wemos/lolin IR Controller Shield
+- A Wemos IR Controller Shield
   -- https://wiki.wemos.cc/products:d1_mini_shields:ir_controller_shield
   -- https://tinyurl.com/y6oelkry
-- A soldering station.
-- A USB cable for installing the firmware on the D1 Mini.
+- Prototype board, Prototype cables. or a soldering station.
+- Arduino IDE installed on your computer. -> https://www.arduino.cc/en/main/software
 
-## Installation
-- Solder the header pins to the Wemos/lolin D1 mini board.
-![](images/IMG1.JPEG)
-- If you have 3D printed parts you can place the cap.
-- Place the IR-Controller shield on top. If you are not using any printed pars then make sure the bottom of the IR-controller isn't touching the aluminum chip shielding. You may want to solder the IR-controller.
-- If you have the 3d printed parts then insert the componenct into the box.
-- Plug in the USB cable.
-- Wait until windows has installed the driver.
-- Use the download button here to download the code.
-- Extract the code on your computer.
-- Open the "Install Wemos D1 mini" folder.
-- Open the Install application.
-- In the install application select the COM port of the WemosD1
-- Select the "Wifi-IR.ino.d1_mini.bin" file.
-- Use the Flash button to install the firmware.
+## Build your project.
+Place the IR controller to the D1 Mini.
+(or use a IR LED)
+
+## Program the code.
+- open the arduino IDE.
+- Add ESP8266 support ising the boards manager. https://github.com/esp8266/Arduino#installing-with-boards-manager
+- Install IRremote. https://github.com/markszabo/IRremoteESP8266#official-releases-via-the-arduino-ide-v18-windows--linux
+- Install ProntoHex. https://github.com/probonopd/ProntoHex
+- Install WiFi Manager. https://github.com/tzapu/WiFiManager#install-through-library-manager
+
+- Connect the wemos D1 mini with USB to your computer.
+- Open the wifi-ir.ino file in Arduino IDE.
+- Goto Tools, Select the board "LOLIN (Wemos) D1 R2 & mini".
+- Goto Tools, Select the serial port.
+- Goto Sketch Upload. the Sketch will now upload to the microcontroller.
+
 
 ## First run.
 - Connect your computer or your mobile phone to the wifi network named "Wifi-Ir".
 - The wifi connection wizard will automatically open.
+
+## 3D Printed case:
+- I've updated the project with a STL and a Fusion 360 model
 
 ## Usage.
 
@@ -50,7 +55,6 @@ This is the fastest connection method. (low latency)
 
 - Connect using telnet port 23
 - Send the prontoHex and end with a return character (\r)
-  Example: 0000 006C 0022 0002 015B 00AD 0016 0016 0016 0041 0016 0016 0016 0016 0016 0041\r
 
 ### Discover using mDNS
 
