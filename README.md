@@ -1,9 +1,11 @@
 # esp8266-wifi-Pronto-IR
+
 A arduino project that makes it possible to send IR codes over a WiFi connection.
 This project will set you back somewhere between 2$ and 4$ and it's super easy to build and use.
 If you like this project then please consider a donation: https://www.paypal.me/NielsdeKlerk
 
 ## Requirements:
+
 - A Wemos/lolin D1 Mini.
   -- https://wiki.wemos.cc/products:d1:d1_mini
   -- http://tiny.cc/zzvj3y
@@ -14,8 +16,11 @@ If you like this project then please consider a donation: https://www.paypal.me/
 - A USB cable for installing the firmware on the D1 Mini.
 
 ## Installation
+
 - Solder the header pins to the Wemos/lolin D1 mini board.
+
 ![](images/IMG1.JPEG)
+
 - If you have 3D printed parts you can place the cap.
 - Place the IR-Controller shield on top. If you are not using any printed pars then make sure the bottom of the IR-controller isn't touching the aluminum chip shielding. You may want to solder the IR-controller.
 - If you have the 3d printed parts then insert the componenct into the box.
@@ -30,15 +35,18 @@ If you like this project then please consider a donation: https://www.paypal.me/
 - Use the Flash button to install the firmware.
 
 ## First run.
+
 - Connect your computer or your mobile phone to the wifi network named "Wifi-Ir".
 - The wifi connection wizard will automatically open.
 
 ## Usage.
 
 ### Connect using a brouwser to
+
 http://<ipaddress of wifi-ir>/
 
 ### Connect using the API:
+
 http://<ipaddress of wifi-ir>/pronto?code=<PRONTO HEX>
 
 Example:
@@ -54,6 +62,6 @@ This is the fastest connection method. (low latency)
 
 ### Discover using mDNS
 
-The code generates a unique hostname. Wifi-IR_...... where the ...... represent the unique id.
-The http based API can be discovered using _wifi-ir-http._tcp.
-The telnet based API The hcan be discovered using _wifi-ir-telnet._tcp.
+The code generates a unique hostname. Wifi-IR\_...... where the ...... represent the unique id.
+The http based API can be discovered using \_wifi-ir-http.\_tcp.
+The telnet based API The hcan be discovered using \_wifi-ir-telnet.\_tcp.
