@@ -22,9 +22,22 @@ If you like this project then please consider a donation: https://www.paypal.me/
 ![](images/IMG1.JPEG)
 
 - If you have 3D printed parts you can place the cap.
+
+![](images/IMG3.JPEG)
+
 - Place the IR-Controller shield on top. If you are not using any printed pars then make sure the bottom of the IR-controller isn't touching the aluminum chip shielding. You may want to solder the IR-controller.
-- If you have the 3d printed parts then insert the componenct into the box.
+
+![](images/IMG2.JPEG)
+![](images/IMG4.JPEG)
+
+- If you have the 3D printed parts then insert the componenct into the box.
+
+![](images/IMG5.JPEG)
+
 - Plug in the USB cable.
+
+![](images/IMG6.JPEG)
+
 - Wait until windows has installed the driver.
 - Use the download button here to download the code.
 - Extract the code on your computer.
