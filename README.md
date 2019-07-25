@@ -30,7 +30,7 @@ If you like this project then please consider a donation: https://www.paypal.me/
 ![](images/IMG2.JPEG)
 ![](images/IMG4.JPEG)
 
-- If you have the 3D printed parts then insert the componenct into the box.
+- If you have the 3D printed parts then insert the component into the box.
 
 ![](images/IMG5.JPEG)
 
